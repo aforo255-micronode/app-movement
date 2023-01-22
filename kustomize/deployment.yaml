@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-movement
-        image: jeanflores2c93/aforo255-nodejs-movement:2
+        image: jeanflores2c93/aforo255-nodejs-movement:5
         ports:
         - containerPort: 5005
         env:
