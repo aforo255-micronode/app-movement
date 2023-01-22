@@ -20,7 +20,7 @@ const counter = new client.Counter({
 const register = new client.Registry();
 register.registerMetric(counter)
 register.setDefaultLabels({
-    app: 'app-account',
+    app: 'app-movement',
     prefix: 'node_'
   })
 client.collectDefaultMetrics({ register })
@@ -34,7 +34,7 @@ appPromise.then(function(app) {
     });
     app.get('/health', async (req, res) => {
         counter.inc()
-        res.send({message: 'Account App healty'});
+        res.send({message: 'Movement App healty'});
     });
     app.listen(PORT, () => {
         console.log('Application running on port ', PORT)
